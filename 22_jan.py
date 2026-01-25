@@ -91,5 +91,7 @@ prsn=person()
 prsn.changeName("Sohel")
 print(prsn.name)
 print(person.name)
+print(person.name)
+
 
 
