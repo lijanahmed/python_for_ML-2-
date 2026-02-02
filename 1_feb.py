@@ -51,3 +51,26 @@ print(person.name)
 # 2. classmethod (cls = class)
 #   cls.anything = class access
 # 3. staticmethod ( no parameter)
+
+
+print("======polymorphism=======")
+
+class complex:
+    def __init__(self,real, img):
+        self.real = real
+        self.img= img
+    def showNumber(self):
+        print(f"{self.real} + {self.img}i")
+
+    def add (self,newNum):
+        self.newReal= self.real + newNum.real
+        self.newImg = self.img + newNum.img
+        return complex(self.newReal,self.newImg)
+
+
+num1= complex(2,5)
+num1.showNumber()
+num2= complex(4,10)
+num2.showNumber()
+num3= num1.add(num2)
+num3.showNumber()
